@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- KEEPS SIDEBAR LOGO CENTERED BULMA -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <!-- MATERIALIZE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.21/dist/shoelace/shoelace.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>🍸 MIXR - Your Guide to Drinks</title>
+</head>
+
+<body>
+  <!-- VIDEO BACKGROUND -->
+  <video playsinline autoplay muted loop poster="/assets/images/polina.jpg" id="bgvid">
+    <source src="/assets/images/backVideo.mp4" type="video/mp4">
+  </video>
+
+  <!--LARGO LOGO AT TOP OF PAGE -->
+  <div class="bigGreenLogo">
+    <img src="assets/images/MixrLogo.png" alt="Mixr Logo" href="/mycocktails" /> </div>
+
+
+  <!-- NAVBAR -->
+  <ul id="dropdown1" class="dropdown-content grey darken-3">
+    <li class = "white-text"><a class = "white-text" href="/signup">Create an Account</a></li>
+    <li><a class = "white-text" href="/login">Log In</a></li>
+    <li><a class = "white-text" href="/logout">Log Out</a></li>
+  </ul>
+  <ul id="dropdown2" class="dropdown-content grey darken-3 white-text">
+    <li><a class = "white-text" href="/can_make">Drinks I Can Make</a></li>
+    <li><a class = "white-text" href="/mycocktails">My Cocktails</a></li>
+    <li><a class = "white-text" href="/pantry">My Pantry</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/mycocktails" class="brand-logo"><img class="responsive-img" id="logo" style="height: 64px;"
+          src="assets/images/MixrLogoNAME.png" /></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/drinksearch">Find a Cocktail</a></li>
+        <li><a href="/cocktails">Browse All Cocktails</a></li>
+        <li><a href="/createcocktail">Create a Cocktail</a></li>
+        <li><a href="/bartenderschoice">Bartender's Choice</a></li>
+                <!-- My Bar Dropdown Trigger -->
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">My Bar<i
+              class="material-icons right">arrow_drop_down</i></a></li>
+        <!-- My Account Dropdown Trigger -->
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">My Account<i
+              class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i>
+          <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+      </a>
+    </div></i>
+
+  </nav>
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+
+        </div>
+        <a href="/mycocktails"><img class="square" src="assets/images/MixrLogo.png"></a>
+
+      </div>
+    </li>
+    <li><a href="/drinksearch">Find a Cocktail</a></li>
+    <li><a href="/cocktails">Browse All Cocktails</a></li>
+    <li><a href="/can_make">Drinks I Can Make</a></li>
+    <li><a href="/createcocktail">Create a Cocktail</a></li>
+    <li><a href="/mycocktails">My Cocktails</a></li>
+    <li><a href="/pantry">My Pantry</a></li>
+    <li><a href="/bartenderschoice">Bartender's Choice</a></li>
+    <li><a href="/signup" class="waves-effect waves-light btn grey darken-3">Create an Account</a></li>
+    <li><a href="/login" class="waves-effect waves-light btn grey darken-3">Log In</a></li>
+    <li><a href="/logout" class="waves-effect waves-light btn grey darken-3">Log Out</a></li>
+  </ul>
+  <br>
+  <div class="container">
+    {{{ body }}}
+  </div>
+  
+  {{!-- These script files are for getting the image upload to work --}}
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  {{!-- // the following files only need to be included in order to support client-side uploading --}}
+  <script src="/scripts/blueimp-file-upload/js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
+  <script src="/scripts/blueimp-file-upload/js/jquery.iframe-transport.js" type="text/javascript"></script>
+  <script src="/scripts/blueimp-file-upload/js/jquery.fileupload.js" type="text/javascript"></script>
+  <script src="/scripts/cloudinary-jquery-file-upload/cloudinary-jquery-file-upload.js" type="text/javascript"></script>
+  <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+  {{!-- pulles in the js needed for the image upload via cloudinary --}}
+  <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    // Side Nav bar
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instance = M.Sidenav.getInstance(elems);
+    });
+    $(document).ready(function () {
+      $('.sidenav').sidenav(); 
+    });
+    
+  </script>
+  <script src="dist/index.js"></script>
+</body>
+
+</HTML>

@@ -1,0 +1,171 @@
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.nav-wrapper {
+  background-color: #3a9e3d;
+}
+
+.container {
+  display: flexbox;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 10px 0px 0px 0px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.card {
+  padding: 2rem;
+}
+
+h1 p {
+  display: inline-block;
+  font-weight: bolder;
+}
+
+.box {
+  padding: 1rem;
+}
+
+.mycolor {
+  color: #424242
+}
+
+.links {
+  font-size: var(--sl-font-size-x-large);
+}
+
+/* login/signup/upload design */
+.loginBox {
+  position: flex;
+  margin: auto;
+  width: 50%;
+  height: 30%;
+  padding: 40px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, .3);
+}
+
+.greenM {
+  padding-top: 2rem;
+  display: flex;
+  height: 10rem;
+  margin: 0 auto;
+}
+
+.loginBox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.loginBox input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginBox input[type="text"],
+.loginBox input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+:placeholder {
+  color: rgba(255, 255, 255, .5);
+}
+
+.loginBox a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* MEDIA */
+@media only screen and (max-width: 769px) {
+  .bigGreenLogo img {
+    display: none;
+  }
+
+  .loginBox {
+    position: flex;
+    margin: auto;
+    width: 75%;
+    height: 30%;
+    padding: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .3);
+  }
+}
+
+@media only screen and (min-width:770px) and (max-width:2000px) {
+  .bigGreenLogo img {
+    padding-top: 2rem;
+    display: flex;
+    height: 20rem;
+    margin: 0 auto;
+  }
+
+  .loginBox {
+    position: flex;
+    margin: auto;
+    width: 50%;
+    height: 30%;
+    padding: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .3);
+  }
+
+  .brand-logo {
+    display: inline-block;
+    left: 25px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+}
